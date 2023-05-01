@@ -1,0 +1,376 @@
+
+*** Running vivado
+    with args -log dht11.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source dht11.tcl
+
+
+****** Vivado v2017.3 (64-bit)
+  **** SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+  **** IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source dht11.tcl -notrace
+Command: synth_design -top dht11 -part xc7a35tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9140 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 351.453 ; gain = 101.594
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'dht11' [C:/Users/minec/dht11/dht11.srcs/sources_1/new/dht11.v:23]
+	Parameter wait2s bound to: 3'b000 
+	Parameter signalStart bound to: 3'b001 
+	Parameter waitingStart bound to: 3'b010 
+	Parameter receiving bound to: 3'b100 
+	Parameter wait1s bound to: 3'b101 
+INFO: [Synth 8-638] synthesizing module 'clk_divider' [C:/Users/minec/dht11/dht11.srcs/sources_1/new/clk_divider.v:23]
+	Parameter div bound to: 16'b0000000001100011 
+INFO: [Synth 8-256] done synthesizing module 'clk_divider' (1#1) [C:/Users/minec/dht11/dht11.srcs/sources_1/new/clk_divider.v:23]
+INFO: [Synth 8-638] synthesizing module 'clk_divider__parameterized0' [C:/Users/minec/dht11/dht11.srcs/sources_1/new/clk_divider.v:23]
+	Parameter div bound to: 16'b0010011100001111 
+INFO: [Synth 8-256] done synthesizing module 'clk_divider__parameterized0' (1#1) [C:/Users/minec/dht11/dht11.srcs/sources_1/new/clk_divider.v:23]
+INFO: [Synth 8-638] synthesizing module 'bcd' [C:/Users/minec/dht11/dht11.srcs/sources_1/imports/new/bcd.v:23]
+INFO: [Synth 8-638] synthesizing module 'BCD7' [C:/Users/minec/dht11/dht11.srcs/sources_1/imports/demo_bcd/BCD7.v:1]
+INFO: [Synth 8-256] done synthesizing module 'BCD7' (2#1) [C:/Users/minec/dht11/dht11.srcs/sources_1/imports/demo_bcd/BCD7.v:1]
+INFO: [Synth 8-256] done synthesizing module 'bcd' (3#1) [C:/Users/minec/dht11/dht11.srcs/sources_1/imports/new/bcd.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/minec/dht11/dht11.srcs/sources_1/new/dht11.v:77]
+WARNING: [Synth 8-6014] Unused sequential element temp_reg was removed.  [C:/Users/minec/dht11/dht11.srcs/sources_1/new/dht11.v:157]
+WARNING: [Synth 8-6014] Unused sequential element humi_reg was removed.  [C:/Users/minec/dht11/dht11.srcs/sources_1/new/dht11.v:158]
+WARNING: [Synth 8-5788] Register dataBuf_reg in module dht11 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/minec/dht11/dht11.srcs/sources_1/new/dht11.v:34]
+WARNING: [Synth 8-5788] Register startTime_reg in module dht11 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/minec/dht11/dht11.srcs/sources_1/new/dht11.v:113]
+WARNING: [Synth 8-5788] Register dataReceive_reg in module dht11 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/minec/dht11/dht11.srcs/sources_1/new/dht11.v:116]
+WARNING: [Synth 8-5788] Register dataReceiveCnt_reg in module dht11 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/minec/dht11/dht11.srcs/sources_1/new/dht11.v:120]
+WARNING: [Synth 8-5788] Register receiveFlag_reg in module dht11 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/minec/dht11/dht11.srcs/sources_1/new/dht11.v:128]
+INFO: [Synth 8-256] done synthesizing module 'dht11' (4#1) [C:/Users/minec/dht11/dht11.srcs/sources_1/new/dht11.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 392.910 ; gain = 143.051
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 392.910 ; gain = 143.051
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/minec/dht11/dht11.srcs/constrs_1/new/constraint1.xdc]
+Finished Parsing XDC File [C:/Users/minec/dht11/dht11.srcs/constrs_1/new/constraint1.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/minec/dht11/dht11.srcs/constrs_1/new/constraint1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/dht11_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/dht11_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 697.500 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 697.500 ; gain = 447.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 697.500 ; gain = 447.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 697.500 ; gain = 447.641
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [C:/Users/minec/dht11/dht11.srcs/sources_1/new/clk_divider.v:32]
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [C:/Users/minec/dht11/dht11.srcs/sources_1/new/clk_divider.v:32]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'dht11'
+INFO: [Synth 8-5544] ROM "counter" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  wait2s |                              000 |                              000
+             signalStart |                              001 |                              001
+            waitingStart |                              010 |                              010
+               receiving |                              011 |                              100
+                  wait1s |                              100 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'dht11'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 697.500 ; gain = 447.641
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     22 Bit       Adders := 1     
+	   2 Input     21 Bit       Adders := 1     
+	   4 Input      8 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               40 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               21 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     40 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 10    
+	   5 Input     21 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 5     
+	   5 Input      3 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module dht11 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     22 Bit       Adders := 1     
+	   2 Input     21 Bit       Adders := 1     
+	   4 Input      8 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               40 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               21 Bit    Registers := 2     
+	                7 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     40 Bit        Muxes := 1     
+	   2 Input     21 Bit        Muxes := 10    
+	   5 Input     21 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 5     
+	   5 Input      3 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 8     
+Module clk_divider 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module clk_divider__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module bcd 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element div1/cnt_reg was removed.  [C:/Users/minec/dht11/dht11.srcs/sources_1/new/clk_divider.v:32]
+WARNING: [Synth 8-6014] Unused sequential element div2/cnt_reg was removed.  [C:/Users/minec/dht11/dht11.srcs/sources_1/new/clk_divider.v:32]
+WARNING: [Synth 8-6014] Unused sequential element div1/cnt_reg was removed.  [C:/Users/minec/dht11/dht11.srcs/sources_1/new/clk_divider.v:32]
+WARNING: [Synth 8-6014] Unused sequential element div2/cnt_reg was removed.  [C:/Users/minec/dht11/dht11.srcs/sources_1/new/clk_divider.v:32]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\dataReceiveCnt_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (dataBuf_retimed_reg)
+WARNING: [Synth 8-3332] Sequential element (dataBuf_retimed_reg) is unused and will be removed from module dht11.
+WARNING: [Synth 8-3332] Sequential element (dataReceiveCnt_reg[6]) is unused and will be removed from module dht11.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 697.500 ; gain = 447.641
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 697.500 ; gain = 447.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 697.500 ; gain = 447.641
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 701.848 ; gain = 451.988
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 701.848 ; gain = 451.988
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 701.848 ; gain = 451.988
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 701.848 ; gain = 451.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 701.848 ; gain = 451.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 701.848 ; gain = 451.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 701.848 ; gain = 451.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    21|
+|3     |LUT1   |     5|
+|4     |LUT2   |    28|
+|5     |LUT3   |    18|
+|6     |LUT4   |    32|
+|7     |LUT5   |    31|
+|8     |LUT6   |   123|
+|9     |FDCE   |    25|
+|10    |FDPE   |     1|
+|11    |FDRE   |   146|
+|12    |IBUF   |     2|
+|13    |IOBUF  |     1|
+|14    |OBUF   |    27|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+----------------------------+------+
+|      |Instance |Module                      |Cells |
++------+---------+----------------------------+------+
+|1     |top      |                            |   462|
+|2     |  div1   |clk_divider                 |    26|
+|3     |  div2   |clk_divider__parameterized0 |    26|
+|4     |  bcd1   |bcd                         |    40|
++------+---------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 701.848 ; gain = 451.988
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 701.848 ; gain = 147.398
+Synthesis Optimization Complete : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 701.848 ; gain = 451.988
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 701.875 ; gain = 463.645
+INFO: [Common 17-1381] The checkpoint 'C:/Users/minec/dht11/dht11.runs/synth_1/dht11.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file dht11_utilization_synth.rpt -pb dht11_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 701.875 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon May  1 12:43:32 2023...
